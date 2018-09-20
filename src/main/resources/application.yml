@@ -1,5 +1,5 @@
 server:
-    port: 9000
+  port: 9000
 spring:
   ############################################################
   #
@@ -28,13 +28,18 @@ spring:
       # 从连接池中获取连接最大等待时间（默认为-1，单位为毫秒，负数表示无限）
       max-wait: -1
 
+
+
+
+
 redis:
+  database: 0
   host: 120.79.141.163
   port: 6379
   password: Cdss!2018
   timeout: 3000
   pool:
-    max-active: 10
-    max-idle: 10
-    min-idle: 0
+    max-total: 100
     max-wait: -1
+    max-idle: 8
+    min-idle: 0
